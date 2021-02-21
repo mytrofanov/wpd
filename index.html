@@ -2,6 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel ="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -14,13 +15,13 @@
 <body>
 
     <div class="container">
-        <div class="header">
-                <div class="header_logo">Your Logo</div>
-   
-<nav class="nav">
+<div class="header" id="header">
+<div class="header_logo" data-scroll="#home">Your Logo</div>
+
+<nav class="nav">   
 
 <span>
-<a class="nav_link" href="#" data-scroll="#home">Home</a> 
+<a class="nav_link" href="#" data-scroll="#intro">Home</a> 
 </span>
 
 <span>
@@ -28,7 +29,7 @@
 </span>
 
 <span>
-<a class="nav_link" href="#" data-scroll="#servicing">Servicing</a>
+<a class="nav_link" href="#" data-scroll="#services">Servicing</a>
 </span>
         
 <span>        
@@ -47,13 +48,30 @@
 <a class="nav_link" href="#"><i class="fas fa-search"></i></a>     
 </span>
             </nav>
-            
+    
+    <!-- Hamburger Menu -->
+    <div class="hamburger-menu">
+    <input id="menu__toggle" type="checkbox" />
+    <label class="menu__btn" for="menu__toggle">
+      <span></span>
+    </label>
+
+    <ul class="menu__box">
+     <li><a class="menu__item" href="#" data-scroll="#intro">Home</a></li>
+      <li><a class="menu__item" href="#" data-scroll="#about">About</a></li>
+			<li><a class="menu__item" href="#"data-scroll="#services">Servicing</a></li>
+			<li><a class="menu__item" href="#"  data-scroll="#portfolio">Portfolio</a></li>
+			<li><a class="menu__item" href="#" data-scroll="#blog">Blog</a></li>
+			<li><a class="menu__item" href="#" data-scroll="#contact">Contact Us</a></li>
+    </ul>
+  </div> <!-- /Hamburger Menu -->
+    
             
         </div> <!--header-->
     </div> <!--/container-->
     
  <div class="container">       
-    <div class="intro">
+    <div class="intro" id="intro">
             <div class="intro_inner"> 
                 
                 <div>
@@ -67,7 +85,7 @@
               </div> 
                 
     
-        <button class="intro_button" type="button">OUR SERVICES</button>
+        <button class="intro_button" type="button" data-scroll="#services">OUR SERVICES</button>
 
         <button class="intro_button" type="button">HIRE IS NOW</button>
                 
@@ -81,7 +99,7 @@
  
     
     <!-- About -->
- <section>
+ <section id="about">
      <div class="container">  
         <div class="section_header">
              
@@ -121,7 +139,7 @@
     
     <!-- Services -->
 
-    <section>
+    <section id="services">
    <div class="container_services">  
         <div class="section_header">
              
@@ -215,7 +233,7 @@
   
      <!-- Latest Works -->
     
-<section>
+<section id="portfolio">
    <div class="container">  
         <div class="section_header">
              
@@ -344,7 +362,7 @@
             <div class="per_month"> per month</div>
         
         </div>
-        <div class="triangle"></div>    
+        
         </div>
     <div class="plan_footer">
         <div class="bonuses">
@@ -370,7 +388,7 @@
             <div class="per_month"> per month</div>
         
         </div>
-        <div class="triangle"></div>    
+          
         </div>
     <div class="plan_footer">
         <div class="bonuses">
@@ -395,7 +413,7 @@
             <div class="per_month"> per month</div>
         
         </div>
-        <div class="triangle"></div>    
+        
         </div>
     <div class="plan_footer">
         <div class="bonuses">
@@ -492,11 +510,11 @@
     
      <!-- Blog -->
     
-<section>
+<section id="blog">
    <div class="container_blog">
         <div class="section_header">
              
-        <h2 class="section_title">Pricing Plan</h2>
+        <h2 class="section_title">Blog</h2>
         <div class="section_text">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
                 </div>
@@ -516,6 +534,10 @@
            <div class="document"><i class="far fa-file"></i>  <span>Development</span></div>
            </div>
            
+        <div class="blog_pic_small"> 
+           <img src="assets/images/blog/bg1.jpg">
+           </div>
+           
            <div class="blog_text">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...  </div>
            </div> <!--/text_item-->
        
@@ -530,6 +552,10 @@
            <div class="document_data">
            <div class="text_date"><i class="far fa-calendar-alt"></i> <span>14.07.2017  </span> </div>
            <div class="document"><i class="far fa-file"></i>  <span>Development</span></div>
+           </div>
+           
+           <div class="blog_pic_small"> 
+           <img src="assets/images/blog/bg2.jpg">
            </div>
            
            <div class="blog_text">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...  </div>
@@ -556,6 +582,10 @@
            <div class="document"><i class="far fa-file"></i>  <span>Development</span></div>
            </div>
            
+           <div class="blog_pic_small"> 
+           <img src="assets/images/blog/bg3.jpg">
+           </div>
+           
            <div class="blog_text">Dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat...  </div>
            </div> <!--/text_item-->
        
@@ -575,7 +605,7 @@
     
          <!-- Contact Us -->
     
-<section>
+<section id="contact">
    <div class="container--contact">
         <div class="section_header--white">
              
@@ -626,6 +656,10 @@
       
     </div>
     
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="assets/js/app.js"></script>
     
     
      </body>
